@@ -14,12 +14,14 @@
                 <div class="carousel-inner">
                    @foreach ($products as $item )
                    <div class="item {{$item['id']==1?'active':''}}">
-                    <img src="{{$item['gallary']}}" alt="Los Angeles">
+                    <a href="detail/{{$item['id']}}">
+                        <img src="{{$item['gallary']}}" alt="Los Angeles">
                     </div>
                     <div class="carousel-caption">
                         <h3>{{$item['name']}}</h3>
                         <p>{{$item['description']}}</p>
                     </div>
+                    </a>
                    @endforeach
                 </div>
 
@@ -39,11 +41,13 @@
                 <div class="">
                     @foreach ($products as $item )
                     <div class="item {{$item['id']==1?'active':''}}">
-                     <img src="{{$item['gallary']}}" >
-                     </div>
-                     <div class="">
-                         <h3>{{$item['name']}}</h3>
-                     </div>
+                        <a href="detail/{{$item['id']}}">
+                            <img src="{{$item['gallary']}}" >
+                        </div>
+                        <div class="">
+                            <h3>{{$item['name']}}</h3>
+                        </div>
+                        </a>
                     @endforeach
                  </div>
             </div>
